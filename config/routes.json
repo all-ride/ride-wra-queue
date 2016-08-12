@@ -1,0 +1,32 @@
+{
+    "routes": [
+        {
+            "path": "/api/v1/queues",
+            "controller": "ride\\web\\rest\\controller\\QueueController",
+            "action": "indexAction",
+            "methods": "GET",
+            "id": "api.queues.index"
+        },
+        {
+            "path": "/api/v1/queues/%id%",
+            "controller": "ride\\web\\rest\\controller\\QueueController",
+            "action": "detailAction",
+            "methods": "GET",
+            "id": "api.queues.detail"
+        },
+        {
+            "path": "/api/v1/queue-jobs",
+            "controller": "ride\\web\\rest\\controller\\QueueJobController",
+            "action": "indexAction",
+            "methods": "GET",
+            "id": "api.queue-jobs.index"
+        },
+        {
+            "path": "/api/v1/queue-jobs/%id%",
+            "controller": "ride\\web\\rest\\controller\\QueueJobController",
+            "action": "detailAction",
+            "methods": "GET",
+            "id": "api.queue-jobs.detail"
+        }
+    ]
+}

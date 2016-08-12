@@ -1,0 +1,24 @@
+{
+    "name": "ride/wra-queue",
+    "description": "JSON API implementation for the queue of a Ride application",
+    "license": "MIT",
+    "version": "0.1.0",
+    "authors": [
+        {
+            "name": "Joris Vandeweerd",
+            "email": "joris@statik.be"
+        }
+    ],
+    "require": {
+        "ride/lib-http-jsonapi": ">=0.2.0",
+        "ride/lib-queue": ">=0.1.0",
+        "ride/web": ">=0.10.0",
+        "ride/wra": ">=0.1.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "ride\\web\\rest\\controller\\": ["src/"],
+            "ride\\web\\rest\\jsonapi\\": ["src/"]
+        }
+    }
+}
