@@ -16,7 +16,6 @@ class QueueJobController extends AbstractResourceJsonApiController {
     protected function initialize() {
         $this->setType('queue-jobs');
         $this->setIdField('id');
-        $this->setAttribute('queue');
         $this->setAttribute('className');
         $this->setAttribute('status');
         $this->setAttribute('description');
@@ -24,6 +23,7 @@ class QueueJobController extends AbstractResourceJsonApiController {
         $this->setAttribute('slot');
         $this->setAttribute('dateAdded');
         $this->setAttribute('dateScheduled');
+        $this->setRelationship('queue', 'queues', 'queue');
 
         $this->setRoute(self::ROUTE_INDEX, 'api.queue-jobs.index');
         $this->setRoute(self::ROUTE_DETAIL, 'api.queue-jobs.detail');

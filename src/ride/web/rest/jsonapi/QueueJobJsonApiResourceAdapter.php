@@ -10,7 +10,7 @@ use ride\library\queue\QueueJobStatus;
 use ride\web\WebApplication;
 
 /**
- * JSON API Resource adapter for the queue
+ * JSON API Resource adapter for a queue job
  */
 class QueueJobJsonApiResourceAdapter implements JsonApiResourceAdapter {
 
