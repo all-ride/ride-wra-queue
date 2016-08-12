@@ -1,0 +1,52 @@
+{
+    "dependencies": [
+        {
+            "interfaces": "ride\\library\\http\\jsonapi\\JsonApiResourceAdapter",
+            "class": "ride\\web\\rest\\jsonapi\\QueueJsonApiResourceAdapter",
+            "id": "queues",
+            "tags": "app"
+        },
+        {
+            "interfaces": "ride\\library\\http\\jsonapi\\JsonApiResourceAdapter",
+            "class": "ride\\web\\rest\\jsonapi\\QueueJobJsonApiResourceAdapter",
+            "id": "queue-jobs",
+            "tags": "app"
+        },
+        {
+            "class": "ride\\web\\rest\\controller\\QueueController",
+            "calls": [
+                {
+                    "method": "__construct",
+                    "arguments": [
+                        {
+                            "name": "jsonApi",
+                            "type": "dependency",
+                            "properties": {
+                                "interface": "ride\\library\\http\\jsonapi\\JsonApi",
+                                "id": "app"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "class": "ride\\web\\rest\\controller\\QueueJobController",
+            "calls": [
+                {
+                    "method": "__construct",
+                    "arguments": [
+                        {
+                            "name": "jsonApi",
+                            "type": "dependency",
+                            "properties": {
+                                "interface": "ride\\library\\http\\jsonapi\\JsonApi",
+                                "id": "app"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
